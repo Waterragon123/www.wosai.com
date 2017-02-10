@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../js/jquery-3.1.1.js"></script>
+	<script src="../../js/artTemplate.js"></script>
+	<link rel="stylesheet" href="../../css/newProduct.css">
+	<link rel="stylesheet" href="../../css/global.css">
+</head>
+<body>
+	<div id="header">
+		<div class="header-in clearfix">
+		    <div class="header-left"></div>
+	        <div class="header-right"></div>
+			<div class="header-in-left">
+				<div class="header-in-left-top">
+					<a href="#">登录</a>
+					<a href="#">注册</a>
+				</div>
+				<div class="header-in-left-bottom">
+					<ul>
+						<li class="home"><a href="#"></a></li>
+						<li class="siteNavL"><a href="#">市集</a>
+						</li>
+						<li><a href="#">新品</a></li>
+						<li><a href="#">热卖</a></li>
+						<li><a href="#">闪购</a></li>
+						<li class="rightBorder"><a href="#">定制</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="header-in-middle"></div>
+			<div class="header-in-right">
+				<div class="header-in-right-top">
+				   <div class="gouwuche">
+				      <div class="gouwuche-img"></div>
+				   	  <a href="#">
+						购物车
+						<span>0</span>
+						件
+					</a>
+				   </div>
+				</div>
+				<div class="header-in-right-bottom">
+					<ul>
+					    <li><a href="#"></a></li>
+						<li><a href="#">动态</a></li>
+						<li><a href="#">画报</a></li>
+						<li class="search">
+							<form action="">
+								<input type="text" placeholder="请输入要搜索的关键字" class="search-box">
+								<input type="button" class="search-btn">
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="content-in clearfix">
+			 <div class="content-title">
+			 	  新品
+			 </div>
+			 <div class="contentNav clearfix">
+			 	<ul>
+			 		<li class="allCategory"><a href="#">全部分类</a></li>
+			 		<li><a href="#">服饰</a></li>
+			 		<li><a href="#">饰品</a></li>
+			 		<li><a href="#">鞋包</a></li>
+			 		<li><a href="#">家居</a></li>
+			 		<li><a href="#">数码</a></li>
+			 		<li><a href="#">文具</a></li>
+			 		<li><a href="#">玩偶</a></li>
+			 		<li><a href="#">定制</a></li>
+			 		<li><a href="#">艺术</a></li>
+			 		<li><a href="#">民艺</a></li>
+			 		<li><a href="#">植物食品</a></li>
+			 	</ul>
+			 </div>
+			 <!-- <div class="shijiGoodsList">
+			 	 <div class="goodsItem">
+			 	 	 <a href="#" class="goodsItem-img"><img src="http://img2.wowsai.com/data/files/store_734491/goods_68/wgood_201611131547485867.jpg" alt=""></a>
+			 	 	 <h3>2017年台历大橘子设计附心情贴纸</h3>
+			 	 	 <div class="shijiGoodsWarp">
+			 	 	     <div class="cover"></div>
+			 	 	 	 <div class="price">￥49</div>
+			 	 	 </div>
+			 	 </div>
+			 	 <div class="goodsItem">
+			 	 	 <a href="#" class="goodsItem-img"><img src="http://img2.wowsai.com/data/files/store_734491/goods_68/wgood_201611131547485867.jpg" alt=""></a>
+			 	 	 <h3>2017年台历大橘子设计附心情贴纸</h3>
+			 	 	 <div class="shijiGoodsWarp">
+			 	 	     <div class="cover"></div>
+			 	 	 	 <div class="price">￥49</div>
+			 	 	 </div>
+			 	 </div>
+			 </div> -->
+		</div>
+	</div>
+
+</body>
+</html>
+<script id="goodsItems" type="text/html">
+         <div class="goodsItem">
+         	   <a href="#" class="goodsItem-img"><img src="{{imgUrl}}" alt=""></a>
+			 	 	 <h3>{{comment}}</h3>
+			 	 	 <div class="shijiGoodsWarp">
+			 	 	  <div class="cover"></div>
+			 	 	  <div class="price">{{price}}</div>
+			 	</div>
+         </div>
+</script>
+<script>
+	$.ajax({
+		url:"../../json/allCategory.json",
+		method:"get",
+		dataType:'json',
+		success:function(data){
+            $itemList=$('<div class="shijiGoodsList"></div>');
+            $.each(data.goodList,function(index,val){
+            	$item=$(template("goodsItems",val));
+            	$item.appendTo($itemList);
+            })
+            $itemList.appendTo('.content-in');
+		}
+	});
+</script>

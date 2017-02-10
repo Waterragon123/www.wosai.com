@@ -1,0 +1,293 @@
+body{
+	background-color: #f6f6f6;
+
+}
+.clearfix:after{  
+   content: "020";  
+   display: block;  
+   height: 0;  
+   clear: both;  
+   visibility: hidden;   
+} 
+ .clearfix {  
+   /* 触发 hasLayout */  
+   zoom: 1;  
+}
+.rightBorder{
+	border-right: 1px solid #eee;
+}
+#header{
+	width: 53.96rem;
+	border-bottom: 0.04rem solid #eee;
+	background-color: white;
+	margin: 0 auto;
+}
+.header-in{
+	width: 44rem;
+	height: 3.6rem;
+	margin: 0 auto;
+	position: relative;
+}
+.header-left,.header-right{
+	position: absolute;
+	width: 5.08rem;
+	height: 1.76rem;
+	bottom: 0;
+	border-top: 0.04rem solid #eee;
+}
+.header-left{
+    left: -5.08rem;
+}
+.header-right{
+	right: -5.08rem;
+}
+.header-in-left,.header-in-right,.header-in-middle{
+	height: 3.6rem;
+	float: left;
+}
+.header-in-left-top,.header-in-left-bottom{
+	width: 100%;
+	height: 1.8rem;
+}
+.header-in-left-bottom{
+	border-top: 0.04rem solid #eee;
+}
+.header-in-left-bottom ul li{
+    float: left;
+    width: 2.68rem;
+    height: 1.76rem;
+    border-left:0.04rem solid #eee; 
+    text-align: center;
+    line-height: 1.76rem;
+}
+.header-in-left-bottom ul li a{
+	font-size: 0.56rem;
+	color: #222;
+}
+.header-in-left-bottom ul .home{
+	width: 1.56rem;
+}
+.header-in-left-bottom ul .home a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/icon.png);
+    background-size: 1.56rem 3.44rem;
+}
+
+.header-in-left-bottom ul .siteNavL a{
+    font-size: 0.56rem;
+}
+.siteNavL{
+	position: relative;
+}
+.siteNavL:hover{
+	background: #eee;
+}
+.siteNavL:hover ul{
+    display: block;
+}
+.siteNavL ul{
+	position: absolute;
+	background: white;
+	z-index: 2;
+	left: -1px;
+	display: none;
+}
+.siteNavL ul li{
+	width: 107px;
+	height: 43px;
+} 
+.siteNavL ul li:hover{
+	background-color: #eee;
+}
+.shiji{
+	background-color: #eee;
+}
+.header-in-left-top a{
+    font-size: 0.56rem;
+    margin-left:10px;
+    line-height: 1.8rem;
+    color: #222;
+}
+.header-in-left,.header-in-right{
+    width: 17rem;
+}
+.header-in-middle{
+	width: 10rem;
+	background: url(../images/logo.jpg);
+	background-size: 10rem 3.52rem; 
+}
+.header-in-right-top,.header-in-right-bottom{
+    width: 100%;
+    height: 1.76rem;
+}
+.header-in-right-top{
+	line-height: 1.76rem;
+	text-align: right;
+}
+.header-in-right-top .gouwuche{
+	width: 3.76rem;
+	height: 1.76rem;
+	float: right;
+	position: relative;
+}
+.header-in-right-top .gouwuche-img{
+	width: 0.92rem;
+	height: 0.68rem;
+	position: absolute;
+	background: url(../images/buycar.png);
+	top: 50%;
+	left: -0.32rem;
+	margin-top: -0.36rem;
+}
+.header-in-right-top a{
+	color: #222;
+	font-size: 0.56rem;
+}
+.header-in-right-bottom{
+	border-top: 0.04rem solid #eee;
+}
+.header-in-right-bottom ul li:nth-of-type(1){
+	width: 1.88rem;
+}
+.header-in-right-bottom ul li{
+	float: left;
+	width: 2.68rem;
+	height: 1.76rem;
+	text-align: center;
+	line-height: 1.76rem;
+	font-size: 0.56rem;
+	border-right: 0.04rem solid #eee;
+}
+.header-in-right-bottom ul li a{
+    color: #222;
+}
+.header-in-right-bottom ul .search{
+	width: 9rem;
+	text-align: left;
+}
+.header-in-right-bottom ul .search .search-box{
+	width: 7.5rem;
+	height: 1.76rem;
+    box-sizing: border-box;
+    padding-left: 0.4rem;
+    float: left;
+}
+.header-in-right-bottom ul .search-btn{
+	width: 1.5rem;
+	height: 1.76rem;
+	background: url(../images/search.png)no-repeat;
+	background-position: center;
+	float: left;
+}
+#content{
+	width: 53.96rem;
+	margin: 2.5rem auto 0;
+	background-color: #fff;
+}
+.content-in{
+	width: 44rem;
+	margin: 0 auto;
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 3.2rem;
+}
+.content-title{
+	width: 9.2rem;
+	height: 2.64rem;
+	text-align: center;
+	position: absolute;
+	top: -1rem;
+	left: 50%;
+	margin-left: -4.6rem;
+	background-color: #fff;
+	box-shadow: 0.08rem 0.08rem 0.08rem 0.08rem #eee;
+	line-height: 2.64rem;
+}
+.contentNav{
+	width: 38.4rem;
+	height: 0.8rem;
+	margin: 0 auto;
+}
+.contentNav ul li{
+	float: left;
+	width: 2.92rem;
+	height: 1rem;
+	line-height: 0.8rem;
+	text-align: center;
+}
+.contentNav ul li:after{
+	content: ".";
+	margin-left: 0.8rem;
+	box-sizing: border-box;
+	vertical-align: text-top;
+}
+.contentNav ul li:nth-of-type(1),.contentNav ul li:nth-of-type(12){
+	width: 4.4rem;
+}
+.contentNav ul li:nth-of-type(12):after{
+	content: "";
+}
+.contentNav ul li a{
+	font-size: 0.48rem;
+	color: #222;
+}
+.allCategory a{
+	color: #07c7d3 !important;
+}
+.shijiGoodsList{
+	width: 44rem;
+	margin: 1.6rem auto 0;
+}
+.goodsItem{
+	width: 9.23rem;
+	height: 15.2rem;
+	margin-right: 1.76rem;
+	float: left;
+}
+.goodsItem-img{
+	display: block;
+	width: 100%;
+	height: 9.68rem;
+
+}
+.goodsItem-img img{
+	width: 100%;
+	height: 100%;
+}
+.goodsItem h3{
+	width: 100%;
+	height: 2rem;
+	font-size: 0.48rem;
+	margin-top: 0.1rem;
+	color: #ccc;
+}
+.shijiGoodsWarp{
+	width: 100%;
+	height: 0.8rem;
+	position: relative;
+}
+.shijiGoodsWarp .price{
+	position: absolute;
+	width: 3.36rem;
+	height: 0.8rem;
+	top: 0;
+	left: 50%;
+	margin-left: -1.68rem;
+	font-size: 0.56rem;
+	line-height: 0.8rem;
+	color: #ff7800;
+	text-align: center;
+	background-color: #fff;
+}
+.cover{
+	position: absolute;
+	width: 5.6rem;
+	height: 0.4rem;
+	top: 0.4rem;
+	left: 50%;
+	margin-left: -2.8rem;
+	border-top: 0.04rem solid #ccc;
+}
